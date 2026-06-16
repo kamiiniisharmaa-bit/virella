@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virella · Privacy Policy</title>
+  <!-- Font Awesome Icons (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #faf8f6;
+      color: #1e1e1e;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* --- header / nav (mirroring homepage & terms) --- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1e1e1e;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo i {
+      color: #b9917a;
+      font-size: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-weight: 500;
+      color: #2c2c2c;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #b9917a;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1.25rem;
+      color: #1e1e1e;
+    }
+    .nav-icons i {
+      cursor: default;
+      transition: color 0.2s;
+    }
+    .nav-icons i:hover {
+      color: #b9917a;
+    }
+
+    /* --- privacy header --- */
+    .privacy-header {
+      margin: 2.8rem 0 2.2rem 0;
+    }
+    .privacy-header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .privacy-header h1 i {
+      color: #b9917a;
+      font-size: 2.4rem;
+    }
+    .privacy-header p {
+      color: #4e463f;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      border-left: 4px solid #b9917a;
+      padding-left: 1.2rem;
+    }
+
+    /* --- privacy content card --- */
+    .privacy-card {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2.8rem 3rem;
+      margin: 2rem 0 3.5rem 0;
+      box-shadow: 0 10px 30px -12px rgba(0,0,0,0.04);
+      border: 1px solid #f0eae4;
+    }
+
+    .privacy-card h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 2rem 0 0.8rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      letter-spacing: -0.3px;
+    }
+    .privacy-card h2:first-of-type {
+      margin-top: 0;
+    }
+    .privacy-card h2 i {
+      color: #b9917a;
+      font-size: 1.3rem;
+      width: 1.8rem;
+    }
+
+    .privacy-card p {
+      color: #2f2b27;
+      margin-bottom: 1rem;
+    }
+
+    .privacy-card ul {
+      margin: 0.5rem 0 1.2rem 2rem;
+      color: #2f2b27;
+    }
+    .privacy-card ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .privacy-card .highlight-box {
+      background: #f6f1ec;
+      border-radius: 1.8rem;
+      padding: 1.5rem 2rem;
+      margin: 1.8rem 0 0.5rem 0;
+      border-left: 6px solid #b9917a;
+    }
+    .privacy-card .highlight-box i {
+      color: #b9917a;
+      margin-right: 0.6rem;
+    }
+
+    .privacy-divider {
+      height: 2px;
+      background: linear-gradient(90deg, #e7dfd8, #b9917a, #e7dfd8);
+      margin: 2rem 0 0.5rem 0;
+      opacity: 0.3;
+    }
+
+    /* --- back link --- */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #1e1e1e;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 1.2rem 0 2.5rem 0;
+      transition: 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+    .back-link i {
+      color: #b9917a;
+      font-size: 1.2rem;
+    }
+    .back-link:hover {
+      color: #b9917a;
+      border-bottom-color: #b9917a;
+    }
+
+    /* --- footer --- */
+    .footer {
+      border-top: 1px solid #e7dfd8;
+      margin-top: 1.5rem;
+      padding: 2.5rem 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #3d3732;
+    }
+    .footer .logo {
+      font-size: 1.6rem;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2.2rem;
+    }
+    .footer-links a {
+      text-decoration: none;
+      color: #3d3732;
+      font-weight: 450;
+    }
+    .footer-links a:hover {
+      color: #b9917a;
+    }
+    .footer-social i {
+      font-size: 1.3rem;
+      margin-left: 0.8rem;
+      color: #3d3732;
+      transition: 0.2s;
+    }
+    .footer-social i:hover {
+      color: #b9917a;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .nav-icons {
+        gap: 1.2rem;
+      }
+      .privacy-card {
+        padding: 1.8rem 1.5rem;
+      }
+      .privacy-header h1 {
+        font-size: 2.2rem;
+        flex-wrap: wrap;
+      }
+      .footer {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (exactly as homepage & terms) -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <i class="fas fa-leaf"></i> Virella
+      </div>
+      <div class="nav-links">
+        <a href="#">New</a>
+        <a href="#">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Accessories</a>
+        <a href="#">Sale</a>
+      </div>
+      <div class="nav-icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-shopping-bag"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- privacy page title -->
+  <div class="privacy-header">
+    <h1><i class="fas fa-shield-halved"></i> Privacy Policy</h1>
+    <p>Last updated: June 17, 2026 · Virella respects your privacy and protects your data.</p>
+  </div>
+
+  <!-- main privacy card -->
+  <div class="privacy-card">
+
+    <!-- 1. Introduction -->
+    <h2><i class="fas fa-circle-info"></i> 1. Introduction</h2>
+    <p>Virella (“we”, “us”, “our”) values your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or make a purchase.</p>
+    <p>By using our services, you agree to the collection and use of information in accordance with this policy. If you do not agree, please do not use our site.</p>
+
+    <!-- 2. Information We Collect -->
+    <h2><i class="fas fa-database"></i> 2. Information We Collect</h2>
+    <p>We collect information you provide directly, such as when you create an account, place an order, or contact us. This may include:</p>
+    <ul>
+      <li><strong>Personal identifiers:</strong> Name, email address, phone number, shipping/billing address.</li>
+      <li><strong>Payment data:</strong> Payment method details (processed securely by our payment partners).</li>
+      <li><strong>Account credentials:</strong> Username and password (encrypted).</li>
+      <li><strong>Communication:</strong> Any messages or feedback you send to us.</li>
+    </ul>
+    <p>We also automatically collect certain information about your device and usage, such as IP address, browser type, pages visited, and referring URLs.</p>
+
+    <!-- 3. How We Use Your Information -->
+    <h2><i class="fas fa-gear"></i> 3. How We Use Your Information</h2>
+    <p>We use the information we collect for various purposes, including:</p>
+    <ul>
+      <li>Processing and fulfilling your orders, including shipping and returns.</li>
+      <li>Communicating with you about your order, account, or promotional offers.</li>
+      <li>Improving our website, products, and customer service.</li>
+      <li>Preventing fraud and ensuring the security of our platform.</li>
+      <li>Complying with legal obligations.</li>
+    </ul>
+
+    <!-- 4. Sharing Your Information -->
+    <h2><i class="fas fa-share-nodes"></i> 4. Sharing Your Information</h2>
+    <p>We do not sell or rent your personal information. We may share your data with trusted third-party service providers who assist us in operating our business, such as:</p>
+    <ul>
+      <li><strong>Payment processors:</strong> To securely handle transactions.</li>
+      <li><strong>Shipping carriers:</strong> To deliver your orders.</li>
+      <li><strong>Analytics tools:</strong> To understand how visitors interact with our site.</li>
+    </ul>
+    <div class="highlight-box">
+      <i class="fas fa-lock"></i> <strong>Your data is safe:</strong> All third-party partners are contractually obligated to protect your information and use it only for the services they provide to us.
+    </div>
+
+    <!-- 5. Cookies & Tracking -->
+    <h2><i class="fas fa-cookie-bite"></i> 5. Cookies & Tracking</h2>
+    <p>We use cookies and similar technologies to enhance your experience, analyze traffic, and personalize content. You can control cookie preferences through your browser settings.</p>
+    <p>We may also use pixels or tags from third-party platforms (like social media) for remarketing and analytics.</p>
+
+    <!-- 6. Your Rights & Choices -->
+    <h2><i class="fas fa-user-check"></i> 6. Your Rights & Choices</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of the data we hold about you.</li>
+      <li><strong>Correction:</strong> Ask us to correct inaccurate information.</li>
+      <li><strong>Deletion:</strong> Request deletion of your data, subject to legal retention requirements.</li>
+      <li><strong>Opt-out:</strong> Unsubscribe from marketing emails at any time.</li>
+    </ul>
+    <p>To exercise these rights, please contact us at <a href="#" style="color: #b9917a; text-decoration: none; border-bottom: 1px dashed #b9917a;">privacy@virella.com</a>.</p>
+
+    <!-- 7. Data Security -->
+    <h2><i class="fas fa-shield"></i> 7. Data Security</h2>
+    <p>We implement industry-standard security measures, including encryption and secure servers, to protect your data. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+    <!-- 8. Children's Privacy -->
+    <h2><i class="fas fa-child"></i> 8. Children's Privacy</h2>
+    <p>Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children. If we become aware of such data, we will delete it promptly.</p>
+
+    <!-- 9. International Transfers -->
+    <h2><i class="fas fa-earth-americas"></i> 9. International Transfers</h2>
+    <p>Your information may be transferred to and processed in countries outside your jurisdiction. We take steps to ensure appropriate safeguards are in place.</p>
+
+    <!-- 10. Changes to This Policy -->
+    <h2><i class="fas fa-clock-rotate-left"></i> 10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page with an updated date.</p>
+
+    <div class="privacy-divider"></div>
+
+    <!-- contact / final note -->
+    <div style="margin-top: 2rem; background: #faf8f6; border-radius: 2rem; padding: 1.5rem 2rem;">
+      <p style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.3rem;">
+        <i class="fas fa-envelope" style="color: #b9917a; font-size: 1.3rem;"></i>
+        <strong>Privacy questions?</strong> Email us at <a href="#" style="color: #b9917a; text-decoration: none; border-bottom: 1px dotted #b9917a;">privacy@virella.com</a>
+      </p>
+      <p style="color: #5a514a; font-size: 0.95rem; margin-top: 0.2rem;">
+        We take your privacy seriously and will respond within 48 hours.
+      </p>
+    </div>
+
+  </div> <!-- end privacy-card -->
+
+  <!-- back to homepage link -->
+  <a href="#" class="back-link" onclick="alert('Return to Virella homepage (simulated)'); return false;">
+    <i class="fas fa-arrow-left"></i> Back to Virella
+  </a>
+
+  <!-- footer (matching homepage & terms) -->
+  <footer class="footer">
+    <div class="logo"><i class="fas fa-leaf"></i> Virella</div>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Stores</a>
+      <a href="#">Sustainability</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-social">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-pinterest"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+  </footer>
+
+  <!-- subtle note -->
+  <div style="text-align: center; font-size: 0.75rem; color: #9e948b; padding: 1.2rem 0 0.2rem; border-top: 1px solid #ede7e1; margin-top: 1.2rem;">
+    <i class="fas fa-check-circle" style="color: #b9917a;"></i> Virella · your privacy matters
+  </div>
+</div>
+</body>
+</html>

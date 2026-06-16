@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virella · About Us</title>
+  <!-- Font Awesome Icons (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #faf8f6;
+      color: #1e1e1e;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* --- header / nav (mirroring other pages) --- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1e1e1e;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo i {
+      color: #b9917a;
+      font-size: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-weight: 500;
+      color: #2c2c2c;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #b9917a;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1.25rem;
+      color: #1e1e1e;
+    }
+    .nav-icons i {
+      cursor: default;
+      transition: color 0.2s;
+    }
+    .nav-icons i:hover {
+      color: #b9917a;
+    }
+
+    /* --- about header --- */
+    .about-header {
+      margin: 2.8rem 0 2.2rem 0;
+    }
+    .about-header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .about-header h1 i {
+      color: #b9917a;
+      font-size: 2.4rem;
+    }
+    .about-header p {
+      color: #4e463f;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      border-left: 4px solid #b9917a;
+      padding-left: 1.2rem;
+    }
+
+    /* --- about content card --- */
+    .about-card {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2.8rem 3rem;
+      margin: 2rem 0 3.5rem 0;
+      box-shadow: 0 10px 30px -12px rgba(0,0,0,0.04);
+      border: 1px solid #f0eae4;
+    }
+
+    .about-card h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 2rem 0 0.8rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      letter-spacing: -0.3px;
+    }
+    .about-card h2:first-of-type {
+      margin-top: 0;
+    }
+    .about-card h2 i {
+      color: #b9917a;
+      font-size: 1.3rem;
+      width: 1.8rem;
+    }
+
+    .about-card p {
+      color: #2f2b27;
+      margin-bottom: 1rem;
+    }
+
+    .about-card .highlight-box {
+      background: #f6f1ec;
+      border-radius: 1.8rem;
+      padding: 1.5rem 2rem;
+      margin: 1.8rem 0 0.5rem 0;
+      border-left: 6px solid #b9917a;
+    }
+    .about-card .highlight-box i {
+      color: #b9917a;
+      margin-right: 0.6rem;
+    }
+
+    .about-divider {
+      height: 2px;
+      background: linear-gradient(90deg, #e7dfd8, #b9917a, #e7dfd8);
+      margin: 2rem 0 0.5rem 0;
+      opacity: 0.3;
+    }
+
+    /* --- values grid --- */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    .value-item {
+      background: #faf8f6;
+      border-radius: 1.5rem;
+      padding: 1.5rem 1.2rem;
+      text-align: center;
+      border: 1px solid #f0eae4;
+      transition: 0.2s;
+    }
+    .value-item:hover {
+      border-color: #b9917a;
+      background: #fcf9f7;
+      transform: translateY(-4px);
+    }
+    .value-item i {
+      font-size: 2.2rem;
+      color: #b9917a;
+      margin-bottom: 0.6rem;
+    }
+    .value-item h4 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+    .value-item p {
+      font-size: 0.9rem;
+      color: #4e463f;
+      margin-bottom: 0;
+    }
+
+    /* --- team / image placeholder --- */
+    .team-section {
+      margin: 2rem 0 0.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      background: #faf8f6;
+      border-radius: 2rem;
+      padding: 1.8rem 2rem;
+    }
+    .team-section img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #e3d9d0;
+      border: 4px solid white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+    .team-text {
+      flex: 1;
+    }
+    .team-text h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .team-text h3 i {
+      color: #b9917a;
+      font-size: 1.2rem;
+    }
+    .team-text p {
+      color: #4e463f;
+      margin-bottom: 0.2rem;
+    }
+
+    /* --- back link --- */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #1e1e1e;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 1.2rem 0 2.5rem 0;
+      transition: 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+    .back-link i {
+      color: #b9917a;
+      font-size: 1.2rem;
+    }
+    .back-link:hover {
+      color: #b9917a;
+      border-bottom-color: #b9917a;
+    }
+
+    /* --- footer --- */
+    .footer {
+      border-top: 1px solid #e7dfd8;
+      margin-top: 1.5rem;
+      padding: 2.5rem 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #3d3732;
+    }
+    .footer .logo {
+      font-size: 1.6rem;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2.2rem;
+    }
+    .footer-links a {
+      text-decoration: none;
+      color: #3d3732;
+      font-weight: 450;
+    }
+    .footer-links a:hover {
+      color: #b9917a;
+    }
+    .footer-social i {
+      font-size: 1.3rem;
+      margin-left: 0.8rem;
+      color: #3d3732;
+      transition: 0.2s;
+    }
+    .footer-social i:hover {
+      color: #b9917a;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .nav-icons {
+        gap: 1.2rem;
+      }
+      .about-card {
+        padding: 1.8rem 1.5rem;
+      }
+      .about-header h1 {
+        font-size: 2.2rem;
+        flex-wrap: wrap;
+      }
+      .footer {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+      .team-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (exactly as other pages) -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <i class="fas fa-leaf"></i> Virella
+      </div>
+      <div class="nav-links">
+       <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      </div>
+      <div class="nav-icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-shopping-bag"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- about page title -->
+  <div class="about-header">
+    <h1><i class="fas fa-seedling"></i> About Virella</h1>
+    <p>Mindfully crafted · timeless style · made for the everyday.</p>
+  </div>
+
+  <!-- main about card -->
+  <div class="about-card">
+
+    <!-- 1. Our Story -->
+    <h2><i class="fas fa-book-open"></i> Our Story</h2>
+    <p>Virella was born from a simple idea: create clothing and accessories that feel as good as they look. Founded in 2020, we set out to build a brand that values quality, sustainability, and the quiet confidence of timeless design.</p>
+    <p>Every piece in our collection is thoughtfully curated — from the materials we source to the hands that craft them. We believe in slow fashion: pieces that last, that you’ll reach for season after season.</p>
+
+    <div class="highlight-box">
+      <i class="fas fa-quote-left"></i> <strong>Our philosophy:</strong> Less, but better. We focus on enduring style, not fleeting trends.
+    </div>
+
+    <!-- 2. What We Stand For -->
+    <h2><i class="fas fa-heart"></i> What We Stand For</h2>
+    <p>At Virella, we are guided by three core principles:</p>
+
+    <div class="values-grid">
+      <div class="value-item">
+        <i class="fas fa-leaf"></i>
+        <h4>Sustainability</h4>
+        <p>We prioritize eco-friendly materials and ethical production.</p>
+      </div>
+      <div class="value-item">
+        <i class="fas fa-hand-sparkles"></i>
+        <h4>Quality Craft</h4>
+        <p>Every detail matters — from stitching to the final finish.</p>
+      </div>
+      <div class="value-item">
+        <i class="fas fa-people-group"></i>
+        <h4>Community</h4>
+        <p>We celebrate the people who wear and make our pieces.</p>
+      </div>
+    </div>
+
+    <!-- 3. Our Materials -->
+    <h2><i class="fas fa-feather"></i> Our Materials</h2>
+    <p>We work with natural, recycled, and low-impact fibers — organic cotton, linen, Tencel™, and reclaimed wool. Our packaging is 100% plastic-free and made from recycled paper.</p>
+    <p>We partner with suppliers who share our commitment to fair labor practices and environmental responsibility.</p>
+
+    <!-- 4. Meet the Team -->
+    <h2><i class="fas fa-users"></i> Meet the Team</h2>
+    <div class="team-section">
+      <img src="https://picsum.photos/id/64/200/200" alt="Virella founder">
+      <div class="team-text">
+        <h3><i class="fas fa-crown"></i> Elena Virella</h3>
+        <p><strong>Founder & Creative Director</strong></p>
+        <p>With over 15 years in fashion, Elena brings a vision of understated elegance and conscious living to every collection.</p>
+      </div>
+    </div>
+    <p style="margin-top: 0.8rem; font-size: 0.95rem; color: #4e463f;">Together with a small, passionate team of designers, artisans, and dreamers, we bring Virella to life.</p>
+
+    <!-- 5. Our Promise -->
+    <h2><i class="fas fa-handshake"></i> Our Promise</h2>
+    <p>We stand behind everything we make. If you’re not completely satisfied, we’ll help you find the perfect fit or make it right. Your trust is the foundation of our brand.</p>
+    <p>We’re here to make sustainable style accessible, beautiful, and effortless.</p>
+
+    <div class="about-divider"></div>
+
+    <!-- final note / connect -->
+    <div style="margin-top: 2rem; background: #faf8f6; border-radius: 2rem; padding: 1.5rem 2rem;">
+      <p style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.3rem;">
+        <i class="fas fa-envelope" style="color: #b9917a; font-size: 1.3rem;"></i>
+        <strong>Say hello:</strong> <a href="#" style="color: #b9917a; text-decoration: none; border-bottom: 1px dotted #b9917a;">hello@virella.com</a>
+      </p>
+      <p style="color: #5a514a; font-size: 0.95rem; margin-top: 0.2rem;">
+        Follow our journey on <i class="fab fa-instagram" style="color: #b9917a;"></i> Instagram and <i class="fab fa-pinterest" style="color: #b9917a;"></i> Pinterest.
+      </p>
+    </div>
+
+  </div> <!-- end about-card -->
+
+  <!-- back to homepage link -->
+  <a href="#" class="back-link" onclick="alert('Return to Virella homepage (simulated)'); return false;">
+    <i class="fas fa-arrow-left"></i> Back to Virella
+  </a>
+
+  <!-- footer (matching other pages) -->
+  <footer class="footer">
+    <div class="logo"><i class="fas fa-leaf"></i> Virella</div>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Stores</a>
+      <a href="#">Sustainability</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-social">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-pinterest"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+  </footer>
+
+  <!-- subtle note -->
+  <div style="text-align: center; font-size: 0.75rem; color: #9e948b; padding: 1.2rem 0 0.2rem; border-top: 1px solid #ede7e1; margin-top: 1.2rem;">
+    <i class="fas fa-check-circle" style="color: #b9917a;"></i> Virella · thoughtfully made
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virella · Terms & Conditions</title>
+  <!-- Font Awesome Icons (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #faf8f6;
+      color: #1e1e1e;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* --- header / nav (mirroring homepage) --- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1e1e1e;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo i {
+      color: #b9917a;
+      font-size: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-weight: 500;
+      color: #2c2c2c;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #b9917a;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1.25rem;
+      color: #1e1e1e;
+    }
+    .nav-icons i {
+      cursor: default;
+      transition: color 0.2s;
+    }
+    .nav-icons i:hover {
+      color: #b9917a;
+    }
+
+    /* --- terms hero / header --- */
+    .terms-header {
+      margin: 2.8rem 0 2.2rem 0;
+    }
+    .terms-header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .terms-header h1 i {
+      color: #b9917a;
+      font-size: 2.4rem;
+    }
+    .terms-header p {
+      color: #4e463f;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      border-left: 4px solid #b9917a;
+      padding-left: 1.2rem;
+    }
+
+    /* --- terms content card --- */
+    .terms-card {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2.8rem 3rem;
+      margin: 2rem 0 3.5rem 0;
+      box-shadow: 0 10px 30px -12px rgba(0,0,0,0.04);
+      border: 1px solid #f0eae4;
+    }
+
+    .terms-card h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 2rem 0 0.8rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      letter-spacing: -0.3px;
+    }
+    .terms-card h2:first-of-type {
+      margin-top: 0;
+    }
+    .terms-card h2 i {
+      color: #b9917a;
+      font-size: 1.3rem;
+      width: 1.8rem;
+    }
+
+    .terms-card p {
+      color: #2f2b27;
+      margin-bottom: 1rem;
+    }
+
+    .terms-card ul {
+      margin: 0.5rem 0 1.2rem 2rem;
+      color: #2f2b27;
+    }
+    .terms-card ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .terms-card .highlight-box {
+      background: #f6f1ec;
+      border-radius: 1.8rem;
+      padding: 1.5rem 2rem;
+      margin: 1.8rem 0 0.5rem 0;
+      border-left: 6px solid #b9917a;
+    }
+    .terms-card .highlight-box i {
+      color: #b9917a;
+      margin-right: 0.6rem;
+    }
+
+    .terms-divider {
+      height: 2px;
+      background: linear-gradient(90deg, #e7dfd8, #b9917a, #e7dfd8);
+      margin: 2rem 0 0.5rem 0;
+      opacity: 0.3;
+    }
+
+    /* --- back link & footer --- */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #1e1e1e;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 1.2rem 0 2.5rem 0;
+      transition: 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+    .back-link i {
+      color: #b9917a;
+      font-size: 1.2rem;
+    }
+    .back-link:hover {
+      color: #b9917a;
+      border-bottom-color: #b9917a;
+    }
+
+    .footer {
+      border-top: 1px solid #e7dfd8;
+      margin-top: 1.5rem;
+      padding: 2.5rem 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #3d3732;
+    }
+    .footer .logo {
+      font-size: 1.6rem;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2.2rem;
+    }
+    .footer-links a {
+      text-decoration: none;
+      color: #3d3732;
+      font-weight: 450;
+    }
+    .footer-links a:hover {
+      color: #b9917a;
+    }
+    .footer-social i {
+      font-size: 1.3rem;
+      margin-left: 0.8rem;
+      color: #3d3732;
+      transition: 0.2s;
+    }
+    .footer-social i:hover {
+      color: #b9917a;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .nav-icons {
+        gap: 1.2rem;
+      }
+      .terms-card {
+        padding: 1.8rem 1.5rem;
+      }
+      .terms-header h1 {
+        font-size: 2.2rem;
+        flex-wrap: wrap;
+      }
+      .footer {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (exactly as homepage) -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <i class="fas fa-leaf"></i> Virella
+      </div>
+      <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      </div>
+      <div class="nav-icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-shopping-bag"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- terms page title -->
+  <div class="terms-header">
+    <h1><i class="fas fa-file-contract"></i> Terms & Conditions</h1>
+    <p>Last updated: June 17, 2026 · Virella operates with transparency and care.</p>
+  </div>
+
+  <!-- main terms card -->
+  <div class="terms-card">
+
+    <!-- 1. General -->
+    <h2><i class="fas fa-scale-balanced"></i> 1. General</h2>
+    <p>Welcome to Virella. By using our website and purchasing our products, you agree to the following terms. These terms apply to all visitors, users, and customers.</p>
+    <p>Virella (“we”, “us”, “our”) reserves the right to update these terms at any time. Changes become effective immediately upon posting.</p>
+
+    <!-- 2. Products & Pricing -->
+    <h2><i class="fas fa-tag"></i> 2. Products & Pricing</h2>
+    <p>All product descriptions, images, and prices are subject to change without notice. We strive for accuracy, but we do not warrant that product descriptions or other content are error-free.</p>
+    <ul>
+      <li><strong>Prices:</strong> All prices are in USD and do not include applicable taxes or shipping fees.</li>
+      <li><strong>Availability:</strong> Items are subject to availability. If an item is out of stock, we will notify you as soon as possible.</li>
+      <li><strong>Discounts:</strong> Promotional codes are valid for a limited time and cannot be combined with other offers.</li>
+    </ul>
+
+    <!-- 3. Orders & Payment -->
+    <h2><i class="fas fa-credit-card"></i> 3. Orders & Payment</h2>
+    <p>When you place an order, you agree to provide current, complete, and accurate purchase information. We reserve the right to refuse or cancel any order for any reason.</p>
+    <div class="highlight-box">
+      <i class="fas fa-shield-halved"></i> <strong>Secure payment:</strong> All transactions are processed through industry-standard encryption. We do not store your credit card details.
+    </div>
+
+    <!-- 4. Shipping & Returns -->
+    <h2><i class="fas fa-truck"></i> 4. Shipping & Returns</h2>
+    <p>We ship worldwide. Delivery times vary by location. Returns are accepted within 30 days of delivery for unworn, unwashed items with original tags.</p>
+    <ul>
+      <li><strong>Shipping costs:</strong> Calculated at checkout based on destination and weight.</li>
+      <li><strong>Return process:</strong> Contact our support team to initiate a return. Customers are responsible for return shipping unless the item is defective.</li>
+      <li><strong>Refunds:</strong> Issued to the original payment method within 7 business days of receiving the return.</li>
+    </ul>
+
+    <!-- 5. Intellectual Property -->
+    <h2><i class="fas fa-copyright"></i> 5. Intellectual Property</h2>
+    <p>All content on this site — including text, graphics, logos, images, and software — is the property of Virella or our content suppliers and is protected by copyright and trademark laws.</p>
+    <p>You may not reproduce, distribute, or create derivative works without our express written permission.</p>
+
+    <!-- 6. User Accounts -->
+    <h2><i class="fas fa-user-lock"></i> 6. User Accounts</h2>
+    <p>You are responsible for maintaining the confidentiality of your account and password. You agree to notify us immediately of any unauthorized use of your account.</p>
+    <p>We reserve the right to terminate accounts, edit content, or cancel orders at our sole discretion.</p>
+
+    <!-- 7. Privacy -->
+    <h2><i class="fas fa-lock"></i> 7. Privacy</h2>
+    <p>Your privacy is important to us. Please review our <a href="#" style="color: #b9917a; text-decoration: none; border-bottom: 1px dashed #b9917a;">Privacy Policy</a> to understand how we collect, use, and protect your personal information.</p>
+
+    <!-- 8. Limitation of Liability -->
+    <h2><i class="fas fa-gavel"></i> 8. Limitation of Liability</h2>
+    <p>Virella shall not be held liable for any indirect, incidental, or consequential damages arising from the use of our products or website. Our total liability is limited to the purchase price of the product you purchased.</p>
+
+    <!-- 9. Governing Law -->
+    <h2><i class="fas fa-globe"></i> 9. Governing Law</h2>
+    <p>These terms are governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions.</p>
+
+    <div class="terms-divider"></div>
+
+    <!-- final note / contact -->
+    <div style="margin-top: 2rem; background: #faf8f6; border-radius: 2rem; padding: 1.5rem 2rem;">
+      <p style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.3rem;">
+        <i class="fas fa-envelope" style="color: #b9917a; font-size: 1.3rem;"></i>
+        <strong>Questions?</strong> Reach out to us at <a href="#" style="color: #b9917a; text-decoration: none; border-bottom: 1px dotted #b9917a;">support@virella.com</a>
+      </p>
+      <p style="color: #5a514a; font-size: 0.95rem; margin-top: 0.2rem;">
+        We’re here to help — typically respond within 24 hours.
+      </p>
+    </div>
+
+  </div> <!-- end terms-card -->
+
+  <!-- back to homepage link (with icon) -->
+  <a href="#" class="back-link" onclick="alert('Return to Virella homepage (simulated)'); return false;">
+    <i class="fas fa-arrow-left"></i> Back to Virella
+  </a>
+
+  <!-- footer (matching homepage) -->
+  <footer class="footer">
+    <div class="logo"><i class="fas fa-leaf"></i> Virella</div>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Stores</a>
+      <a href="#">Sustainability</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-social">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-pinterest"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+  </footer>
+
+  <!-- subtle note -->
+  <div style="text-align: center; font-size: 0.75rem; color: #9e948b; padding: 1.2rem 0 0.2rem; border-top: 1px solid #ede7e1; margin-top: 1.2rem;">
+    <i class="fas fa-check-circle" style="color: #b9917a;"></i> Virella · transparent & fair
+  </div>
+</div>
+</body>
+</html>
